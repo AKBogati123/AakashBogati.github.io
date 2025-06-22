@@ -53,7 +53,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:name/
-
+header_pages:
+  - blog.md
+  - about.md
 # Defaults for posts and pages
 defaults:
   - scope:

@@ -1,19 +1,18 @@
-# Site settings
 title: "Aakash Bogati"
 author: "Aakash Bogati"
 description: "Developer sharing real coding adventures, insights, and solutions. From coffee to code, one line at a time."
-email: "aakashofficial018@gmail.com"
+email: "your-email@example.com"
 
 # Theme
 theme: minima
 
-# Social links (update with your real handles)
-github_username: AKBogati123
-linkedin_username: 
-
-# Site URL
+# CORRECTED URLs
 url: "https://akbogati123.github.io"
 baseurl: "/AakashBogati.github.io"
+
+# Social links
+github_username: AKBogati123
+linkedin_username: your-linkedin-username
 
 # Build settings
 markdown: kramdown
@@ -23,16 +22,15 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Minima theme settings
+# Theme settings
 minima:
   date_format: "%b %-d, %Y"
-  
-# Show excerpts on homepage
 show_excerpts: true
 
-# Google Analytics (optional - add your tracking ID)
-# google_analytics: UA-XXXXXXXXX-X
-
-# Comments (optional - uncomment if you want to use Disqus)
-# disqus:
-#   shortname: your-disqus-shortname
+# Exclude unnecessary files
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/

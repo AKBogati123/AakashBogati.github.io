@@ -1,45 +1,57 @@
 ---
 layout: page
-title: Blog
+title: "Blog"
 permalink: /blog/
 ---
 
-# 📚 All Posts
+<div class="blog-header">
+  <h1>All Posts</h1>
+  <p>Thoughts, tutorials, and insights from my development journey</p>
+</div>
 
-<div style="margin: 2rem 0;">
-{% for post in site.posts %}
-  <article style="padding: 2rem; margin-bottom: 2rem; border: 1px solid #e1e5e9; border-radius: 8px; background-color: #ffffff;">
-    <header>
-      <h2 style="margin-bottom: 0.5rem;">
-        <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: #2c3e50;">{{ post.title }}</a>
-      </h2>
-      <p style="color: #7f8c8d; font-size: 0.9rem; margin-bottom: 1rem;">
-        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+<div class="blog-content">
+  <div class="posts-container">
+    {% for post in site.posts %}
+    <article class="blog-post-card">
+      <div class="post-meta">
+        <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
         {% if post.categories.size > 0 %}
-          • 
-          {% for category in post.categories %}
-            <span style="background-color: #e3f2fd; padding: 2px 8px; border-radius: 12px; font-size: 0.8rem;">{{ category }}</span>
+        <div class="post-categories">
+          {% for category in post.categories limit:3 %}
+          <span class="category-tag">{{ category }}</span>
           {% endfor %}
+        </div>
         {% endif %}
-      </p>
-    </header>
-    
-    {% if post.excerpt %}
-      <div style="color: #555; line-height: 1.6; margin-bottom: 1rem;">
-        {{ post.excerpt | strip_html | truncatewords: 50 }}
       </div>
-    {% endif %}
-    
-    <footer>
-      <a href="{{ post.url | relative_url }}" style="color: #3498db; text-decoration: none; font-weight: 500;">Read full post →</a>
-    </footer>
-  </article>
-{% endfor %}
+      
+      <h2 class="post-title">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+      
+      {% if post.excerpt %}
+      <div class="post-excerpt">
+        {{ post.excerpt | strip_html | truncatewords: 40 }}
+      </div>
+      {% endif %}
+      
+      <div class="post-footer">
+        <a href="{{ post.url | relative_url }}" class="read-more-btn">
+          Read Full Post <span>→</span>
+        </a>
+        <div class="post-stats">
+          <span class="read-time">{{ post.content | number_of_words | divided_by: 200 }} min read</span>
+          <span class="word-count">{{ post.content | number_of_words }} words</span>
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  
+  {% if site.posts.size == 0 %}
+  <div class="no-posts-message">
+    <div class="no-posts-icon">📝</div>
+    <h2>No posts yet!</h2>
+    <p>I'm working on some amazing content. Check back soon for insightful posts about development, programming, and technology!</p>
+  </div>
+  {% endif %}
 </div>
-
-{% if site.posts.size == 0 %}
-<div style="text-align: center; padding: 3rem; color: #7f8c8d;">
-  <h3>No posts yet!</h3>
-  <p>Check back soon for awesome content.</p>
-</div>
-{% endif %}

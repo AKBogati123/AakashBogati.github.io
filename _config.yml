@@ -12,8 +12,8 @@ github_username: AKBogati123
 linkedin_username: 
 
 # Site URL
-url: "https://akbogati123.github.io/AakashBogati.github.io"
-baseurl: ""
+url: "https://akbogati123.github.io"
+baseurl: "/AakashBogati.github.io"
 
 # Build settings
 markdown: kramdown

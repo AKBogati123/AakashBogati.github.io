@@ -1,47 +1,71 @@
 <header class="site-header" role="banner">
   <div class="wrapper">
-    <div class="site-nav-container">
-      <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
-        <span class="logo-icon">🚀</span>
-        {{ site.title | escape }}
-      </a>
+    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
+      <span class="logo-icon">🚀</span>
+      {{ site.title | escape }}
+    </a>
 
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger" class="menu-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
 
-        <div class="trigger">
-          <a class="page-link" href="{{ "/" | relative_url }}">
-            <span class="nav-icon">🏠</span>
-            <span class="nav-text">Home</span>
+      <div class="trigger">
+        <a class="page-link" href="{{ "/" | relative_url }}">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-text">Home</span>
+        </a>
+        <a class="page-link" href="{{ "/blog/" | relative_url }}">
+          <span class="nav-icon">📝</span>
+          <span class="nav-text">Blog</span>
+        </a>
+        <a class="page-link" href="{{ "/tutorials/" | relative_url }}">
+          <span class="nav-icon">📚</span>
+          <span class="nav-text">Tutorials</span>
+        </a>
+        <a class="page-link" href="{{ "/about/" | relative_url }}">
+          <span class="nav-icon">👨‍💻</span>
+          <span class="nav-text">About</span>
+        </a>
+        
+        <div class="social-nav">
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" class="social-link">
+            <span class="social-icon">⚡</span>
           </a>
-          <a class="page-link" href="{{ "/blog/" | relative_url }}">
-            <span class="nav-icon">📝</span>
-            <span class="nav-text">Blog</span>
+          <a href="mailto:{{ site.email }}" class="social-link">
+            <span class="social-icon">✉️</span>
           </a>
-          <a class="page-link" href="{{ "/tutorials/" | relative_url }}">
-            <span class="nav-icon">📚</span>
-            <span class="nav-text">Tutorials</span>
-          </a>
-          <a class="page-link" href="{{ "/about/" | relative_url }}">
-            <span class="nav-icon">👨‍💻</span>
-            <span class="nav-text">About</span>
-          </a>
-          
-          <div class="social-nav">
-            <a href="https://github.com/{{ site.github_username }}" target="_blank" class="social-link">
-              <span class="social-icon">⚡</span>
-            </a>
-            <a href="mailto:{{ site.email }}" class="social-link">
-              <span class="social-icon">✉️</span>
-            </a>
-          </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </div>
 </header>
+
+<script>
+// Navigation scroll effect
+document.addEventListener('DOMContentLoaded', function() {
+  const header = document.querySelector('.site-header');
+  
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  // Active page highlighting
+  const currentPath = window.location.pathname;
+  const pageLinks = document.querySelectorAll('.page-link');
+  
+  pageLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (currentPath === href || (currentPath.includes(href) && href !== '/')) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>

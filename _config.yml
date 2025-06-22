@@ -1,17 +1,17 @@
 # Site settings
 title: "Aakash Bogati"
 author: "Aakash Bogati"
-description: "Developer sharing real coding adventures, insights, and solutions. From coffee to code, one line at a time."
+description: "Full-Stack Developer & Technical Writer sharing real development experiences, practical tutorials, and insights from the world of software engineering."
 email: "your-email@example.com"
 
-# Theme - IMPORTANT: This must be exactly right
+# Theme
 theme: minima
 
-# CORRECTED URLs for your project pages setup
+# URLs
 url: "https://akbogati123.github.io"
 baseurl: "/AakashBogati.github.io"
 
-# Social links (update with your real handles)
+# Social links
 github_username: AKBogati123
 linkedin_username: your-linkedin-username
 twitter_username: your-twitter-handle
@@ -24,39 +24,19 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Exclude files from processing
-exclude:
-  - .sass-cache/
-  - .jekyll-cache/
-  - gemfiles/
-  - Gemfile
-  - Gemfile.lock
-  - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-
-# Minima theme settings
-minima:
-  date_format: "%b %-d, %Y"
-  
-# Show excerpts on homepage
+# Show excerpts
 show_excerpts: true
 
-# Pagination (optional)
-paginate: 5
+# Pagination
+paginate: 12
 paginate_path: "/page:num/"
 
-# Collections (if you want to add more content types)
-collections:
-  projects:
-    output: true
-    permalink: /:collection/:name/
+# Header navigation
 header_pages:
   - blog.md
   - about.md
-# Defaults for posts and pages
+
+# Post defaults
 defaults:
   - scope:
       path: ""
@@ -69,3 +49,13 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+
+# Exclude files
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/

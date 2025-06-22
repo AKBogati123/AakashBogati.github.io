@@ -1,43 +1,25 @@
----
-layout: page
-title: About
-permalink: /about/
----
+![logo](https://github.com/AKBogati123/AKBogati123/blob/main/20230825_113608_0000.jpg)
+<h1 align="center">Hi 👋, I'm Aakash Bogati</h1>
+<h3 align="center">Enthusiastic Learner and Creator</h3>
 
-# About Aakash Bogati
+<img align="right" alt="coding" width="400" src="https://media.licdn.com/dms/image/D4D12AQHOwkiVU5dhAQ/article-cover_image-shrink_600_2000/0/1699466474826?e=2147483647&v=beta&t=za5T6Usop6pvnoB4-UucDSgNE0CDV2EUU8F9gULygFQ">
 
-## 👨‍💻 Developer & Technical Writer
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=akbogati123&label=Profile%20views&color=0e75b6&style=flat" alt="akbogati123" /> </p>
 
-Hey there! I'm Aakash, a passionate developer who believes in learning and sharing knowledge openly. This blog is my space to document my coding journey, share insights, and connect with fellow developers.
+- ⚡ Fun fact **I am Explorer**
 
-## 🚀 What I Do
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://www.linkedin.com/in/aakash-bogati-764091277?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="aakash bogati" height="30" width="40" /></a>
+<a href="https://instagram.com/aakashbogativlogs" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="aakashbogativlogs" height="30" width="40" /></a>
+<a href="https://youtube.com/@TechandEthics12344?si=mCoSneyIprugppuD" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="tech & ethics" height="30" width="40" /></a>
+</p>
 
-- **Full-Stack Development**: Building web applications with modern technologies
-- **Technical Writing**: Explaining complex concepts in simple terms
-- **Open Source**: Contributing to projects and learning from the community
-- **Continuous Learning**: Always exploring new technologies and best practices
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c" width="40" height="40"/> </a> <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a> <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40" height="40"/> </a> <a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="40" height="40"/> </a> <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a> </p>
 
-## 🛠️ Technologies I Work With
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=akbogati123&show_icons=true&locale=en&layout=compact" alt="akbogati123" /></p>
 
-**Languages:** Python, JavaScript, TypeScript  
-**Frontend:** React, Vue.js, HTML5, CSS3  
-**Backend:** Node.js, Django, FastAPI  
-**Database:** PostgreSQL, MongoDB  
-**Tools:** Git, Docker, AWS, VS Code  
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=akbogati123&show_icons=true&locale=en" alt="akbogati123" /></p>
 
-## 📫 Get In Touch
-
-- **GitHub:** [AKBogati123](https://github.com/AKBogati123)
-- **Email:** your-email@example.com
-- **LinkedIn:** [Your LinkedIn Profile]
-
-## 🎯 Blog Focus
-
-This blog covers:
-- Programming tutorials and tips
-- Project walkthroughs
-- Technology insights
-- Learning experiences
-- Industry best practices
-
-Thanks for stopping by! Feel free to reach out if you want to collaborate or just chat about tech.
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=akbogati123&" alt="akbogati123" /></p>

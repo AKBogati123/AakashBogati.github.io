@@ -1,7 +1,7 @@
 # Site settings
 title: "Aakash Bogati"
 author: "Aakash Bogati"
-description: "Full-Stack Developer & Technical Writer sharing real development experiences, practical tutorials, and insights from the world of software engineering."
+description: "Full-Stack Developer & Technical Writer sharing real development experiences, practical tutorials, and insights from software engineering."
 email: "your-email@example.com"
 
 # Theme
@@ -27,14 +27,8 @@ plugins:
 # Show excerpts
 show_excerpts: true
 
-# Pagination
-paginate: 12
-paginate_path: "/page:num/"
-
-# Header navigation
-header_pages:
-  - blog.md
-  - about.md
+# Header navigation (DO NOT SET - we're using custom navigation)
+# header_pages: - REMOVE THIS LINE
 
 # Post defaults
 defaults:

@@ -7,7 +7,7 @@ permalink: /about/
 <!-- Hero Section -->
 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 2rem; margin: -2rem -2rem 4rem -2rem; border-radius: 0 0 2rem 2rem; text-align: center; position: relative; overflow: hidden;">
   <!-- Animated background elements -->
-  <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><circle cx=\"25\" cy=\"25\" r=\"2\" fill=\"white\" opacity=\"0.1\"/><circle cx=\"75\" cy=\"75\" r=\"3\" fill=\"white\" opacity=\"0.1\"/><circle cx=\"50\" cy=\"10\" r=\"1\" fill=\"white\" opacity=\"0.1\"/></svg>'); animation: float 20s infinite linear;"></div>
+  <div class="floating-dots"></div>
   
   <div style="position: relative; z-index: 2;">
     <h1 style="font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">👋 About Aakash Bogati</h1>
@@ -39,7 +39,7 @@ permalink: /about/
       <!-- Avatar with animated border -->
       <div style="width: 220px; height: 220px; margin: 0 auto 2rem; position: relative;">
         <div style="width: 200px; height: 200px; border-radius: 50%; background: linear-gradient(135deg, #3b82f6, #1d4ed8); display: flex; align-items: center; justify-content: center; font-size: 5rem; color: white; box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3); position: relative; z-index: 2; margin: 10px;">👨‍💻</div>
-        <div style="position: absolute; top: 0; left: 0; width: 220px; height: 220px; border: 3px solid transparent; border-radius: 50%; background: linear-gradient(45deg, #3b82f6, #1d4ed8, #3b82f6) border-box; animation: rotate 3s linear infinite;"></div>
+        <div class="rotating-border"></div>
       </div>
       
       <h2 style="font-size: 1.8rem; color: #1e293b; margin-bottom: 0.5rem; font-weight: 700;">Aakash Bogati</h2>
@@ -47,7 +47,7 @@ permalink: /about/
       
       <!-- Status badge -->
       <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: #dcfce7; color: #166534; padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.9rem; font-weight: 500; margin-bottom: 2rem;">
-        <div style="width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite;"></div>
+        <div class="pulse-dot"></div>
         Available for opportunities
       </div>
       
@@ -236,34 +236,6 @@ permalink: /about/
     
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
       <div style="background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition: all 0.3s ease; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 50%; opacity: 0.05;"></div>
-        <div style="font-size: 3rem; margin-bottom: 1rem; position: relative;">💻</div>
-        <h3 style="font-size: 1.2rem; color: #1e293b; margin-bottom: 1rem; font-weight: 600;">Clean Code</h3>
-        <p style="color: #64748b; line-height: 1.6;">Writing maintainable, readable code that stands the test of time and makes other developers smile</p>
-      </div>
-      
-      <div style="background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition: all 0.3s ease; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; opacity: 0.05;"></div>
-        <div style="font-size: 3rem; margin-bottom: 1rem; position: relative;">🚀</div>
-        <h3 style="font-size: 1.2rem; color: #1e293b; margin-bottom: 1rem; font-weight: 600;">Performance</h3>
-        <p style="color: #64748b; line-height: 1.6;">Optimizing applications for lightning-fast speed and exceptional user experiences</p>
-      </div>
-      
-      <div style="background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition: all 0.3s ease; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 50%; opacity: 0.05;"></div>
-        <div style="font-size: 3rem; margin-bottom: 1rem; position: relative;">📚</div>
-        <h3 style="font-size: 1.2rem; color: #1e293b; margin-bottom: 1rem; font-weight: 600;">Continuous Learning</h3>
-        <p style="color: #64748b; line-height: 1.6;">Always exploring new technologies, frameworks, and best practices in the ever-evolving tech landscape</p>
-      </div>
-      
-      <div style="background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition: all 0.3s ease; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 50%; opacity: 0.05;"></div>
-        <div style="font-size: 3rem; margin-bottom: 1rem; position: relative;">🤝</div>
-        <h3 style="font-size: 1.2rem; color: #1e293b; margin-bottom: 1rem; font-weight: 600;">Mentoring</h3>
-        <p style="color: #64748b; line-height: 1.6;">Helping fellow developers grow, succeed, and reach their full potential in their coding journey</p>
-      </div>
-      
-      <div style="background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition: all 0.3s ease; position: relative; overflow: hidden;">
         <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: linear-gradient(135deg, #06b6d4, #0891b2); border-radius: 50%; opacity: 0.05;"></div>
         <div style="font-size: 3rem; margin-bottom: 1rem; position: relative;">🌍</div>
         <h3 style="font-size: 1.2rem; color: #1e293b; margin-bottom: 1rem; font-weight: 600;">Open Source</h3>
@@ -365,7 +337,7 @@ permalink: /about/
   <!-- Call to Action -->
   <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 2rem; margin: 0 -2rem; border-radius: 2rem; text-align: center; position: relative; overflow: hidden;">
     <!-- Animated background -->
-    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><circle cx=\"20\" cy=\"20\" r=\"2\" fill=\"white\" opacity=\"0.1\"/><circle cx=\"80\" cy=\"80\" r=\"3\" fill=\"white\" opacity=\"0.1\"/><circle cx=\"40\" cy=\"60\" r=\"1\" fill=\"white\" opacity=\"0.1\"/><circle cx=\"60\" cy=\"30\" r=\"2\" fill=\"white\" opacity=\"0.1\"/></svg>'); animation: float 15s infinite linear;"></div>
+    <div class="floating-particles"></div>
     
     <div style="position: relative; z-index: 2;">
       <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 1rem; color: white;">🤝 Let's Build Something Amazing!</h2>
@@ -384,7 +356,7 @@ permalink: /about/
           <span>Check my GitHub</span>
         </a>
         
-        <a href="/AakashBogati.github.io/blog/" style="background-color: rgba(255, 255, 255, 0.15); color: white; padding: 1rem 2rem; border-radius: 0.75rem; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; gap: 0.75rem; backdrop-filter: blur(10px);">
+        <a href="{{ '/blog/' | relative_url }}" style="background-color: rgba(255, 255, 255, 0.15); color: white; padding: 1rem 2rem; border-radius: 0.75rem; text-decoration: none; font-weight: 600; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.2); display: flex; align-items: center; gap: 0.75rem; backdrop-filter: blur(10px);">
           <span style="font-size: 1.3rem;">📝</span>
           <span>Read my blog</span>
         </a>
@@ -398,8 +370,56 @@ permalink: /about/
 
 </div>
 
-<!-- Add CSS animations -->
+<!-- Add CSS animations and fix the problematic background elements -->
 <style>
+/* Replace problematic SVG backgrounds with CSS animations */
+.floating-dots {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 2px, transparent 2px),
+              radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 3px, transparent 3px),
+              radial-gradient(circle at 50% 10%, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 100px 100px, 150px 150px, 80px 80px;
+  animation: float 20s infinite linear;
+}
+
+.floating-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 2px, transparent 2px),
+              radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 3px, transparent 3px),
+              radial-gradient(circle at 40% 60%, rgba(255,255,255,0.1) 1px, transparent 1px),
+              radial-gradient(circle at 60% 30%, rgba(255,255,255,0.1) 2px, transparent 2px);
+  background-size: 120px 120px, 180px 180px, 90px 90px, 110px 110px;
+  animation: float 15s infinite linear;
+}
+
+.rotating-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 220px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #3b82f6, #1d4ed8, #3b82f6) border-box;
+  animation: rotate 3s linear infinite;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
 @keyframes float {
   0% { transform: translateX(-100px); }
   100% { transform: translateX(100px); }
@@ -467,4 +487,32 @@ permalink: /about/
     justify-content: center;
   }
 }
-</style>
+</style> all 0.3s ease; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 50%; opacity: 0.05;"></div>
+        <div style="font-size: 3rem; margin-bottom: 1rem; position: relative;">💻</div>
+        <h3 style="font-size: 1.2rem; color: #1e293b; margin-bottom: 1rem; font-weight: 600;">Clean Code</h3>
+        <p style="color: #64748b; line-height: 1.6;">Writing maintainable, readable code that stands the test of time and makes other developers smile</p>
+      </div>
+      
+      <div style="background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition: all 0.3s ease; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; opacity: 0.05;"></div>
+        <div style="font-size: 3rem; margin-bottom: 1rem; position: relative;">🚀</div>
+        <h3 style="font-size: 1.2rem; color: #1e293b; margin-bottom: 1rem; font-weight: 600;">Performance</h3>
+        <p style="color: #64748b; line-height: 1.6;">Optimizing applications for lightning-fast speed and exceptional user experiences</p>
+      </div>
+      
+      <div style="background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition: all 0.3s ease; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 50%; opacity: 0.05;"></div>
+        <div style="font-size: 3rem; margin-bottom: 1rem; position: relative;">📚</div>
+        <h3 style="font-size: 1.2rem; color: #1e293b; margin-bottom: 1rem; font-weight: 600;">Continuous Learning</h3>
+        <p style="color: #64748b; line-height: 1.6;">Always exploring new technologies, frameworks, and best practices in the ever-evolving tech landscape</p>
+      </div>
+      
+      <div style="background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition: all 0.3s ease; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 50%; opacity: 0.05;"></div>
+        <div style="font-size: 3rem; margin-bottom: 1rem; position: relative;">🤝</div>
+        <h3 style="font-size: 1.2rem; color: #1e293b; margin-bottom: 1rem; font-weight: 600;">Mentoring</h3>
+        <p style="color: #64748b; line-height: 1.6;">Helping fellow developers grow, succeed, and reach their full potential in their coding journey</p>
+      </div>
+      
+      <div style="background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition:

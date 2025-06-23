@@ -18,9 +18,10 @@ permalink: /blog/
         <div class="stat">
           {% assign total_words = 0 %}
           {% for post in site.posts %}
-            {% assign total_words = total_words | plus: post.content | number_of_words %}
+            {% assign words = post.content | number_of_words %}
+            {% assign total_words = total_words | plus: words %}
           {% endfor %}
-          <span class="stat-number">{{ total_words | divided_by: 1000 }}k</span>
+          <span class="stat-number">{{ total_words | divided_by: 1000 }}k+</span>
           <span class="stat-label">Words</span>
         </div>
         <div class="stat">
@@ -74,7 +75,9 @@ permalink: /blog/
             Read Full Post <span>→</span>
           </a>
           <div class="post-stats">
-            <span>📖 {{ post.content | number_of_words | divided_by: 200 }} min read</span>
+            {% assign read_time = post.content | number_of_words | divided_by: 200 %}
+            {% if read_time == 0 %}{% assign read_time = 1 %}{% endif %}
+            <span>📖 {{ read_time }} min read</span>
             <span>📝 {{ post.content | number_of_words }} words</span>
           </div>
         </div>

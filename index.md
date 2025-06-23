@@ -148,8 +148,7 @@ title: "Home"
     <div class="container">
       <h2 class="section-title">Explore by Topic</h2>
       <div class="topics-grid">
-        {% assign sorted_categories = site.categories | sort: 1 %}
-        {% for category in sorted_categories %}
+        {% for category in site.categories %}
         <a href="{{ '/blog/' | relative_url }}#{{ category[0] | slugify }}" class="topic-card">
           <div class="topic-icon">
             {% case category[0] %}

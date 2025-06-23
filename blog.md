@@ -1,21 +1,107 @@
 ---
-layout: page
+layout: default
 title: "Blog"
 permalink: /blog/
 ---
 
+<div class="blog-page">
+  <div class="blog-header">
+    <div class="container">
+      <h1>📚 Technical Blog</h1>
+      <p>Thoughts, tutorials, and insights from my development journey</p>
+      
+      <div class="blog-stats">
+        <div class="stat">
+          <span class="stat-number">{{ site.posts.size }}</span>
+          <span class="stat-label">Posts</span>
+        </div>
+        <div class="stat">
+          {% assign total_words = 0 %}
+          {% for post in site.posts %}
+            {% assign total_words = total_words | plus: post.content | number_of_words %}
+          {% endfor %}
+          <span class="stat-number">{{ total_words | divided_by: 1000 }}k</span>
+          <span class="stat-label">Words</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">{{ site.categories.size }}</span>
+          <span class="stat-label">Categories</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Category Filter -->
+    {% if site.categories.size > 0 %}
+    <div class="category-filter">
+      <button class="filter-btn active" data-category="all">All Posts</button>
+      {% for category in site.categories %}
+      <button class="filter-btn" data-category="{{ category[0] | slugify }}">
+        {{ category[0] }} ({{ category[1].size }})
+      </button>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Blog Posts -->
+    <div class="posts-container">
+      {% for post in site.posts %}
+      <article class="blog-post-card" data-categories="{% for cat in post.categories %}{{ cat | slugify }} {% endfor %}">
+        <div class="post-meta">
+          <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
+          {% if post.categories.size > 0 %}
+          <div class="post-categories">
+            {% for category in post.categories limit:3 %}
+            <span class="category-tag">{{ category }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        
+        <h2 class="post-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+        
+        {% if post.excerpt %}
+        <div class="post-excerpt">
+          {{ post.excerpt | strip_html | truncatewords: 50 }}
+        </div>
+        {% endif %}
+        
+        <div class="post-footer">
+          <a href="{{ post.url | relative_url }}" class="read-more-btn">
+            Read Full Post <span>→</span>
+          </a>
+          <div class="post-stats">
+            <span>📖 {{ post.content | number_of_words | divided_by: 200 }} min read</span>
+            <span>📝 {{ post.content | number_of_words }} words</span>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+      
+      {% if site.posts.size == 0 %}
+      <div class="no-posts-message">
+        <div class="no-posts-icon">📝</div>
+        <h2>No posts yet!</h2>
+        <p>I'm working on some amazing content. Check back soon for insightful posts about development, programming, and technology!</p>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
 <style>
-.blog-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 2rem;
+.blog-page {
+  padding-top: 2rem;
 }
 
 .blog-header {
-  text-align: center;
-  padding: 3rem 0;
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  margin: -2rem -2rem 3rem -2rem;
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  text-align: center;
   border-radius: 0 0 2rem 2rem;
 }
 
@@ -23,19 +109,73 @@ permalink: /blog/
   font-size: 3rem;
   font-weight: 700;
   color: #1e293b;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .blog-header p {
   font-size: 1.2rem;
   color: #64748b;
-  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.blog-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.category-filter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: white;
+  color: #64748b;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+  transform: translateY(-2px);
 }
 
 .posts-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .blog-post-card {
@@ -109,7 +249,6 @@ permalink: /blog/
   line-height: 1.7;
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  text-align: left;
 }
 
 .post-footer {
@@ -183,17 +322,25 @@ permalink: /blog/
 }
 
 @media (max-width: 768px) {
-  .blog-container {
-    padding: 0 1rem;
-  }
-  
   .blog-header {
-    margin: -1rem -1rem 2rem -1rem;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
   }
   
   .blog-header h1 {
     font-size: 2rem;
+  }
+  
+  .blog-stats {
+    gap: 2rem;
+  }
+  
+  .category-filter {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .posts-container {
+    padding: 0 1rem;
   }
   
   .post-title a {
@@ -217,54 +364,49 @@ permalink: /blog/
 }
 </style>
 
-<div class="blog-container">
-  <div class="blog-header">
-    <h1>📚 All Posts</h1>
-    <p>Thoughts, tutorials, and insights from my development journey</p>
-  </div>
+<script>
+// Category filtering functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const postCards = document.querySelectorAll('.blog-post-card');
 
-  <div class="posts-container">
-    {% for post in site.posts %}
-    <article class="blog-post-card">
-      <div class="post-meta">
-        <time class="post-date">{{ post.date | date: "%B %d, %Y" }}</time>
-        {% if post.categories.size > 0 %}
-        <div class="post-categories">
-          {% for category in post.categories limit:3 %}
-          <span class="category-tag">{{ category }}</span>
-          {% endfor %}
-        </div>
-        {% endif %}
-      </div>
-      
-      <h2 class="post-title">
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </h2>
-      
-      {% if post.excerpt %}
-      <div class="post-excerpt">
-        {{ post.excerpt | strip_html | truncatewords: 50 }}
-      </div>
-      {% endif %}
-      
-      <div class="post-footer">
-        <a href="{{ post.url | relative_url }}" class="read-more-btn">
-          Read Full Post <span>→</span>
-        </a>
-        <div class="post-stats">
-          <span>📖 {{ post.content | number_of_words | divided_by: 200 }} min read</span>
-          <span>📝 {{ post.content | number_of_words }} words</span>
-        </div>
-      </div>
-    </article>
-    {% endfor %}
-    
-    {% if site.posts.size == 0 %}
-    <div class="no-posts-message">
-      <div class="no-posts-icon">📝</div>
-      <h2>No posts yet!</h2>
-      <p>I'm working on some amazing content. Check back soon for insightful posts about development, programming, and technology!</p>
-    </div>
-    {% endif %}
-  </div>
-</div>
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      // Remove active class from all buttons
+      filterBtns.forEach(b => b.classList.remove('active'));
+      // Add active class to clicked button
+      this.classList.add('active');
+
+      const category = this.getAttribute('data-category');
+
+      // Filter blog post cards
+      postCards.forEach(card => {
+        const cardCategories = card.getAttribute('data-categories');
+        
+        if (category === 'all' || cardCategories.includes(category)) {
+          card.style.display = 'block';
+          card.style.animation = 'fadeInUp 0.5s ease';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Smooth scroll animation for filtered results
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes fadeInUp {
+      from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+      }
+      to { 
+        opacity: 1; 
+        transform: translateY(0); 
+      }
+    }
+  `;
+  document.head.appendChild(style);
+});
+</script>

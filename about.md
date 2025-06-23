@@ -487,32 +487,34 @@ permalink: /about/
     justify-content: center;
   }
 }
-</style> all 0.3s ease; position: relative; overflow: hidden;">
+      <div style="background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition: all 0.3s ease; position: relative; overflow: hidden;">
         <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: linear-gradient(135deg, #3b82f6, #1d4ed8); border-radius: 50%; opacity: 0.05;"></div>
         <div style="font-size: 3rem; margin-bottom: 1rem; position: relative;">💻</div>
         <h3 style="font-size: 1.2rem; color: #1e293b; margin-bottom: 1rem; font-weight: 600;">Clean Code</h3>
         <p style="color: #64748b; line-height: 1.6;">Writing maintainable, readable code that stands the test of time and makes other developers smile</p>
       </div>
-      
+      <!-- Performance -->
       <div style="background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition: all 0.3s ease; position: relative; overflow: hidden;">
         <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; opacity: 0.05;"></div>
         <div style="font-size: 3rem; margin-bottom: 1rem; position: relative;">🚀</div>
         <h3 style="font-size: 1.2rem; color: #1e293b; margin-bottom: 1rem; font-weight: 600;">Performance</h3>
         <p style="color: #64748b; line-height: 1.6;">Optimizing applications for lightning-fast speed and exceptional user experiences</p>
       </div>
-      
+      <!-- Continuous Learning -->
       <div style="background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition: all 0.3s ease; position: relative; overflow: hidden;">
         <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 50%; opacity: 0.05;"></div>
         <div style="font-size: 3rem; margin-bottom: 1rem; position: relative;">📚</div>
         <h3 style="font-size: 1.2rem; color: #1e293b; margin-bottom: 1rem; font-weight: 600;">Continuous Learning</h3>
         <p style="color: #64748b; line-height: 1.6;">Always exploring new technologies, frameworks, and best practices in the ever-evolving tech landscape</p>
       </div>
-      
+      <!-- Mentoring -->
       <div style="background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition: all 0.3s ease; position: relative; overflow: hidden;">
         <div style="position: absolute; top: -50px; right: -50px; width: 100px; height: 100px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 50%; opacity: 0.05;"></div>
         <div style="font-size: 3rem; margin-bottom: 1rem; position: relative;">🤝</div>
         <h3 style="font-size: 1.2rem; color: #1e293b; margin-bottom: 1rem; font-weight: 600;">Mentoring</h3>
         <p style="color: #64748b; line-height: 1.6;">Helping fellow developers grow, succeed, and reach their full potential in their coding journey</p>
       </div>
-      
-      <div style="background: white; padding: 2rem; border-radius: 1.5rem; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition:
+    </div>
+  </section>
+
+</div>
